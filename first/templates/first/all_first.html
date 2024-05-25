@@ -4,5 +4,13 @@
 {% endblock %}
 
 {% block content %}
-<h1>First | This is first</h1>
+<h1>Hola | This is first</h1>
+{% for first in firsts %}
+<div class="first-item">
+<img src="{{first.image.url}}" alt="{{first.name}}">
+<h3>{{ first.name }}</h3>
+<p>{{ first.description }}</p>
+</div>
+{% endfor %}
+
 {% endblock %}
