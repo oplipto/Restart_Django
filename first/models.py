@@ -17,6 +17,7 @@ class firstVariety(models.Model):
     date_added = models.DateTimeField(default=timezone.now)
     type = models.CharField(max_length=2, choices=FIRST_TYPE_CHOICES, default='LG')
     price_currency = models.CharField(max_length=1000, default='USD')
+    description = models.TextField(default='')
 
 
     def __str__(self):
