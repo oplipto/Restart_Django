@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>first Stores</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">
+            Search Stores
+        </button>
+    </form>
+   {% if Stores %}
+   <h2>Stores with selected first variety</h2>
+   <ul>
+         {% for store in Stores %}
+         <li>{{ store.name }} - {{ store.location }}</li>
+         {% endfor %}
+   </ul>
+   
+   {% endif %}
+{% endblock %}
