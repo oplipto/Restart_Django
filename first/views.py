@@ -27,4 +27,4 @@ def first_store_review(request):
     else:
         form = firstVarietyForm()
 
-    return render(request, 'first/first_stores.html', {'form': form, 'stores': stores})
+    return render(request, 'first/first_stores.html', {'stores' : stores, 'form' : form})

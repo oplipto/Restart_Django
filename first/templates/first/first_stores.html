@@ -2,17 +2,17 @@
 
 {% block content %}
     <h1>first Stores</h1>
-    <form method="post">
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">
             Search Stores
         </button>
     </form>
-   {% if Stores %}
+   {% if stores %}
    <h2>Stores with selected first variety</h2>
    <ul>
-         {% for store in Stores %}
+         {% for store in stores %}
          <li>{{ store.name }} - {{ store.location }}</li>
          {% endfor %}
    </ul>
